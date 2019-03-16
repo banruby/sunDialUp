@@ -1,0 +1,71 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 79%);
+    z-index: 10;
+    position: absolute;
+    li {
+        margin: 10px;
+    }
+    li p {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+    i {
+        padding: 10px 0;
+    }
+    a {
+        &:hover {
+            background-color: rgba(0,0,0, 0.8);
+            color: white;
+        }
+
+        &:focus {
+            border: 2px dotted black;
+        }
+    }
+    a.email {
+        color: inherit;
+        &:hover {
+            background-color: transparent; 
+        }
+    }
+}
+
+.overlayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.overlayExplanation {
+    display: block;
+    margin: 0 auto;
+}
+
+.overlayList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0 20px 0;
+}
+
+@media (max-width: 750px) {
+    .overlayExplanation {
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .overlayExplanation {
+        width: 90%;
+    }
+    .overlayList {
+        flex-direction: column;
+        align-items: center;
+        li {
+            width: 50%;
+        }
+    }
+}
